@@ -27,6 +27,7 @@ jobs:
         with:
           project_id: notely-433122
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          export_default_credentials: true  # Ensures the credentials are exported as default
 
       - name: Authenticate Docker to Artifact Registry
         run: gcloud auth configure-docker us-central1-docker.pkg.dev
